@@ -1,0 +1,19 @@
+@host = http://localhost:5000
+
+### כל המשימות
+GET {{host}}/api/tasks
+
+### הוספת משימה
+POST {{host}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "להכין שיעור ארכיטקטורה",
+  "dueDate": "2026-11-05",
+  "urgency": "High"
+}
+
+### חיפוש משימות
+GET {{host}}/api/tasks/search?urgency=High&isDone=true&title=שיעור
+
+
